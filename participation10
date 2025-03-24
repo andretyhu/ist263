@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participation 10</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="large">
+    <h2>Im large.</h2>
+    <p>• When the viewport is over 800 pixels.</p>
+  </div>
+
+  <div class="small">
+    <h2>Im small.</h2>
+    <p>• When the viewport is 800 pixels or less.</p>
+  </div>
+</body>
+</html>
+
+
+  /* Show content when screen is wider than 800px */
+  @media (min-width: 801px) {
+    .large {
+      display: none;
+    }
+  }
+  
+  /* Show content when screen is 800px or less */
+  @media (max-width: 800px) {
+    .small {
+      display: none;
+    }
+  }
