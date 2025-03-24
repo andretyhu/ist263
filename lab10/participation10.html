@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Participation 10</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Participation 10</title> 
+  <style> /* Show content when screen is wider than 800px */
+    @media only screen and (min-width: 801px) {
+      .small {
+        display: none;
+      }
+    }
+    
+    /* Show content when screen is 800px or less */
+    @media only screen and (max-width: 800px) {
+      .large {
+        display: none;
+      }
+    }</style>
 </head>
 <body>
   <div class="large">
@@ -20,16 +32,4 @@
 </html>
 
 
-  /* Show content when screen is wider than 800px */
-  @media (min-width: 801px) {
-    .large {
-      display: none;
-    }
-  }
-  
-  /* Show content when screen is 800px or less */
-  @media (max-width: 800px) {
-    .small {
-      display: none;
-    }
-  }
+ 
