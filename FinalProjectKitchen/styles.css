@@ -1,45 +1,350 @@
-<a href="#maincontent" class="skip-link">Skip to content</a>
-.form-map-container {
+/* ========== BASE STYLES ========== */
+
+/* Applies to the whole website */
+body {
+    font-family: Arial, sans-serif;  /* Clean, readable font */
+    background-color: white;         /* White background */
+    color: black;                    /* Black text for contrast */
+    margin: 0;                       /* Remove default margin */
+  }
+  
+  /* Accessibility: Hidden skip link for screen readers and keyboard users */
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  /* Skip link becomes visible when focused */
+  .skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 1em;
+    padding: 0.5em;
+    background-color: yellow;
+  }
+  
+  /* ========== HEADER & NAVIGATION ========== */
+  
+  header {
+    background-color: #f44336;  /* Bright red for branding */
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  /* Navigation links inside header */
+  nav ul {
+    list-style: none;            /* Remove bullet points */
+    padding: 0;
+    display: flex;               /* Flexbox for horizontal layout */
+    flex-wrap: wrap;             /* Wrap links on smaller screens */
+    justify-content: center;     /* Center nav items */
+    gap: 1em;
+    margin-top: 1em;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;     /* Button-style border */
+    padding: 0.5em;
+  }
+  
+  /* ========== INTRO TEXT (Shared Page Heading Style) ========== */
+  
+  .intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 2em auto 1em auto;
+    padding: 0 1em;
+  }
+  
+  /* ========== FLEXBOX LAYOUT FOR CONTACT PAGE ========== */
+  
+  /* Flex container for contact form + contact info side by side */
+  .form-and-info {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 1em;
+  }
+  
+  /* Contact form and info box columns */
+  .form-box,
+  .info-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f3f3f3;
+    padding: 1em;
+    border: 1px solid #ccc;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5em;
+  }
+  
+  /* ========== FORM FIELD STYLING ========== */
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    background-color: #f44336;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #d32f2f;  /* Darker red when hovering */
+  }
+  
+  /* ========== MAP STYLING ========== */
+  
+  .map-area {
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #e0e0e0;
+    text-align: center;
+    border-radius: 6px;
+  }
+  
+  /* ========== FOOTER ========== */
+  
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }
 
-    .map {
-        max-width: 100%;
-        flex: 1 1 100%;
+  /* ========== HERO SECTION ========== */
+.hero {
+    background-color: #fce8e6;
+    text-align: center;
+    padding: 3em 1em;
+  }
+  
+  .hero h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .hero p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }
+  
+  .cta-button {
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    padding: 0.6em 1.2em;
+    border: none;
+    display: inline-block;
+  }
+  
+  .cta-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* ========== MENU HIGHLIGHTS ========== */
+  .menu-preview {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #fff5f5;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  
+  .menu-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1em;
+    width: 250px;
+    text-align: left;
+  }
+  
+  .menu-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .menu-card h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #f44336;
+  }
+  
+  /* ========== HOURS & LOCATION ========== */
+  .hours-location {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #f9f9f9;
+  }
+  
+  .info-columns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 1em;
+  }
+  
+  .info-columns div {
+    border: 1px solid #ccc;
+    padding: 1em;
+    min-width: 250px;
+    background-color: white;
+  }
 
-        @media screen and (max-width: 800px) {
-            nav a {
-              display: block;
-              width: 100%;
-              padding: 10px;
-            }
-          
-            nav span {
-              display: none;
-            }
-          }
+  /* ========== REVIEW PAGE & HOURS ========== */
+  .review-box .date {
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 0.4em;
+  }
 
-          body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
-          }
-          
-          header, footer {
-            background-color: #eaeaea;
-            text-align: center;
-          }
-          
-          h1, h2 {
-            color: #2e2e2e;
-          }
-          
-          main {
-            margin: auto;
-          }
-          
-          nav a {
-            text-decoration: none;
-            color: #0066cc;
-          }
+  /* ========== REVIEWS STYLING ========== */
+.review-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+    padding: 2em;
+  }
+  
+  .review-box {
+    background-color: #fffdfa;
+    border: 1px solid #f4d9d9;
+    padding: 1em;
+    width: 280px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+  }
+  
+  .review-box h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+  }
+  
+  .review-box .stars {
+    color: #f44336;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+  }
+  
+  .review-box .date {
+    font-size: 0.85em;
+    color: gray;
+    margin-bottom: 0.5em;
+  }
+  
+  .review-box p {
+    margin-bottom: 0.5em;
+  }
+
+  body {
+    background-color: #fdfdfd;
+  }
+
+  /* ========== MENU STYLING ========== */
+
+.menu-category {
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+  
+  .menu-category h3 {
+    border-bottom: 2px solid #f44336;
+    color: #5c3c00;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #f1cfcf;
+    padding: 1em 0;
+  }
+  
+  .menu-item p {
+    margin: 0.4em 0;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #ffe0b2;
+    color: #5c3c00;
+    font-size: 0.75em;
+    padding: 0.2em 0.5em;
+    border-radius: 10px;
+    margin-top: 0.3em;
+  }
+
+  /* ========== MEDIA QUERY ========== */
+  @media screen and (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-columns {
+      flex-direction: column;
+    }
+  
+    .form-and-info {
+      flex-direction: column;
+    }
+  }
