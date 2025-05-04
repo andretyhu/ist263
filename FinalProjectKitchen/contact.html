@@ -1,63 +1,87 @@
-<a href="#maincontent" class="skip-link">Skip to content</a>
-<html lang="en"></html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class="form-map-container">
-    <form>...</form>
-    <iframe src="will be added"></iframe>
-  </div>
-
-
-  <nav>
-    <a href="index.html">Home</a> <span>|</span>
-    <a href="skills.html">Skills</a> <span>|</span>
-    <a href="contact.html">Contact</a>
-
-    <a href="menu.html">View Our Full Menu</a>
-  </nav>
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | Andre’s Kitchen</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Contact Us - Andre's Kitchen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <header>
-    <h1>What Our Guests Are Saying:</h1>
-  </header>
-  <main>
-    <blockquote>⭐️⭐️⭐️⭐️⭐️<br>“The best pasta I’ve had in years. The atmosphere is amazing, and the staff is incredibly friendly!” – Julia S.</blockquote>
-    <blockquote>⭐️⭐️⭐️⭐️⭐️<br>“I ordered takeout, and the food was still hot and fresh when it got to my door. Loved the grilled salmon!” – Marcus L.</blockquote>
-    <blockquote>⭐️⭐️⭐️⭐️⭐️<br>“This is my new favorite spot. The desserts are to die for!” – Emily R.</blockquote>
-
-    <h2>Location:</h2>
-    <p>919 E Genesee St<br>Syracuse, NY 13210</p>
-
-    <h2>Phone:</h2>
-    <p>(315) 516-1015</p>
-
-    <h2>✉️ Email:</h2>
-    <p>ahu108@syr.edu</p>
-
-    <h2>🕒 Hours of Operation:</h2>
-    <p>
-      Monday–Thursday: 11am – 9pm<br>
-      Friday–Saturday: 11am – 10pm<br>
-      Sunday: 12pm – 8pm
-    </p>
-
-    <p>📌 View us on the map below and come visit!</p>
-    <!-- Placeholder for Map -->
-    <div>
-      <iframe src="https://maps.google.com/maps?q=Syracuse,%20NY&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
-    </div>
-  </main>
-  <footer>
+    <h1>Andre's Kitchen</h1>
     <nav>
-      <a href="index.html">Home</a> | 
-      <a href="menu.html">Menu</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Menu</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
     </nav>
+  </header>
+
+  <main id="main">
+    <section class="intro">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us and book your next reservation!</p>
+    </section>
+
+    <section class="form-and-info">
+      <div class="form-box">
+        <h3>Send Us a Message</h3>
+        <form onsubmit="showConfirmation(); return false;">
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name"><br><br>
+
+          <label for="email">Email</label><br>
+          <input type="text" id="email" name="email"><br><br>
+
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+          <input type="submit" value="Send Message">
+        </form>
+      </div>
+
+      <div class="info-box">
+        <h3>Contact Information</h3>
+        <p><strong>Address</strong><br>919 E Genesee St, 550<br>Syracuse, NY 13210</p>
+
+        <p><strong>Hours</strong><br>
+        Monday - Thursday: 11:00 AM to 9:00 PM<br>
+        Friday - Saturday: 11:00 AM to 10:00 PM<br>
+        Sunday: 12:00 PM to 8:00 PM</p>
+
+        <p><strong>Phone</strong><br>(315) 516-1015</p>
+
+        <p><strong>Email</strong><br>ahu108@syr.edu</p>
+      </div>
+    </section>
+
+    <section class="map-area">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.700915028077!2d-76.13514288452543!3d43.04812287914606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f365b1542875%3A0xe1d67d242bf0c7a7!2sSyracuse%20University!5e0!3m2!1sen!2sus!4v1585678324569!5m2!1sen!2sus"
+        width="100%"
+        height="300"
+        style="border:1px solid #ccc;"
+        allowfullscreen=""
+        loading="lazy"
+        title="Andre's Kitchen Location">
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Andre's Kitchen | Website created for IST 263</p>
   </footer>
+
+  <script>
+    function showConfirmation() {
+      alert("Thank you for your message! We will get in contact soon!");
+    }
+  </script>
+
 </body>
 </html>
