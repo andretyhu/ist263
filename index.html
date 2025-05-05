@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Andre's Kitchen - Home</title>
+  <button id="toggle-dark" style="position: absolute; top: 1em; right: 1em;">Toggle Dark Mode</button>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <a href="#main" class="skip-link">Skip to main content</a>
+  <script>
+    const toggleBtn = document.getElementById('toggle-dark');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+  <body class="home-page"></body>
 
   <header>
     <h1>Andre's Kitchen</h1>
@@ -41,14 +49,12 @@
       <h2>Signature Dishes</h2>
       <div class="menu-items">
         <div class="menu-card">
-          <img src="images/lemonyapple.jpg">
-          <h3>Lemony Apple Salad</h3>
+          <img src="images/lemonyapple.jpg" alt="Lemony Apple Salad with greens and vinaigrette">>
           <p>Crisp apples, mixed greens, and walnuts tossed in a lemon vinaigrette, all covered by a homestyle honey mustard sauce.</p>
           <p class="price">$11.99</p>
         </div>
         <div class="menu-card">
-          <img src="images/reconstructedpotpie.jpg">
-          <h3>Reconstructed Homestyle Chicken & Biscuit Pot Pie </h3>
+          <img src="images/reconstructedpotpie.jpg" alt="Reconstructed chicken pot pie with biscuits and chili sauce">
           <p>Fried balls of creamy chicken and vegetables breaded with biscuits and served with a homemade chilli pepper sauce </p>
           <p class="price">$14.99</p>
         </div>
@@ -78,7 +84,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Andre's Kitchen | Website created for IST 263</p>
+    <p>2025 Andre's Kitchen | Website created for IST 263</p>
   </footer>
 
 </body>
