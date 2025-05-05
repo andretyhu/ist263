@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Contact Us - Andre's Kitchen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-  <a href="#main" class="skip-link">Skip to main content</a>
 
   <header>
     <h1>Andre's Kitchen</h1>
+    <button id="toggle-dark" style="position: absolute; top: 1em; right: 1em;">Toggle Dark Mode</button>
+    <script>
+        const toggleBtn = document.getElementById('toggle-dark');
+        toggleBtn.addEventListener('click', () => {
+          document.body.classList.toggle('dark');
+        });
+      </script>
+    
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -74,7 +83,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Andre's Kitchen | Website created for IST 263</p>
+    <p>2025 Andre's Kitchen | Website created for IST 263</p>
   </footer>
 
   <script>
