@@ -1,4 +1,4 @@
-/* ========== BASE STYLES ========== */
+/*  BASE STYLES  */
 
 /* Applies to the whole website */
 body {
@@ -8,27 +8,8 @@ body {
     margin: 0;                       /* Remove default margin */
   }
   
-  /* Accessibility: Hidden skip link for screen readers and keyboard users */
-  .skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
   
-  /* Skip link becomes visible when focused */
-  .skip-link:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 1em;
-    padding: 0.5em;
-    background-color: yellow;
-  }
-  
-  /* ========== HEADER & NAVIGATION ========== */
+  /* HEADER & NAVIGATION */
   
   header {
     background-color: #f44336;  /* Bright red for branding */
@@ -60,7 +41,7 @@ body {
     padding: 0.5em;
   }
   
-  /* ========== INTRO TEXT (Shared Page Heading Style) ========== */
+  /*  INTRO TEXT (Shared Page Heading Style)  */
   
   .intro {
     text-align: center;
@@ -69,7 +50,7 @@ body {
     padding: 0 1em;
   }
   
-  /* ========== FLEXBOX LAYOUT FOR CONTACT PAGE ========== */
+  /*  FLEXBOX LAYOUT FOR CONTACT PAGE  */
   
   /* Flex container for contact form + contact info side by side */
   .form-and-info {
@@ -109,7 +90,7 @@ body {
     padding: 0.5em;
   }
   
-  /* ========== FORM FIELD STYLING ========== */
+  /*  FORM FIELD STYLING  */
   
   input[type="text"],
   textarea {
@@ -130,7 +111,7 @@ body {
     background-color: #d32f2f;  /* Darker red when hovering */
   }
   
-  /* ========== MAP STYLING ========== */
+  /*  MAP STYLING  */
   
   .map-area {
     max-width: 700px;
@@ -141,7 +122,7 @@ body {
     border-radius: 6px;
   }
   
-  /* ========== FOOTER ========== */
+  /*  FOOTER  */
   
   footer {
     background-color: #222;
@@ -150,7 +131,7 @@ body {
     padding: 1em;
   }
 
-  /* ========== HERO SECTION ========== */
+  /*  HERO SECTION  */
 .hero {
     background-color: #fce8e6;
     text-align: center;
@@ -180,7 +161,7 @@ body {
     background-color: #d32f2f;
   }
   
-  /* ========== MENU HIGHLIGHTS ========== */
+  /*  MENU HIGHLIGHTS  */
   .menu-preview {
     text-align: center;
     padding: 2em 1em;
@@ -219,7 +200,7 @@ body {
     color: #f44336;
   }
   
-  /* ========== HOURS & LOCATION ========== */
+  /*  HOURS & LOCATION  */
   .hours-location {
     text-align: center;
     padding: 2em 1em;
@@ -241,14 +222,14 @@ body {
     background-color: white;
   }
 
-  /* ========== REVIEW PAGE & HOURS ========== */
+  /*  REVIEW PAGE & HOURS  */
   .review-box .date {
     font-size: 0.85em;
     color: #555;
     margin-bottom: 0.4em;
   }
 
-  /* ========== REVIEWS STYLING ========== */
+  /*  REVIEWS STYLING  */
 .review-section {
     display: flex;
     flex-wrap: wrap;
@@ -291,7 +272,7 @@ body {
     background-color: #fdfdfd;
   }
 
-  /* ========== MENU STYLING ========== */
+  /*  MENU STYLING  */
 
 .menu-category {
     max-width: 700px;
@@ -328,7 +309,7 @@ body {
     margin-top: 0.3em;
   }
 
-  /* ========== MEDIA QUERY ========== */
+  /* MEDIA QUERY */
   @media screen and (max-width: 600px) {
     nav ul {
       flex-direction: column;
@@ -347,4 +328,82 @@ body {
     .form-and-info {
       flex-direction: column;
     }
+  }
+
+  /* FONT CHANGE */
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+/* TOGGLE DARK MODE */
+body.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  body.dark header,
+  body.dark footer {
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+  body.dark nav a {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  body.dark input,
+  body.dark textarea,
+  body.dark select,
+  body.dark button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555;
+  }
+  body.dark .form-box,
+  body.dark .info-box,
+  body.dark .review-box,
+  body.dark .menu-card,
+  body.dark .map-area {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+  }
+
+  /* DARK MODE CHANGE ON INDEX.HTML */
+body.dark.home-page .hero,
+body.dark.home-page .menu-preview {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark.home-page .hero p,
+body.dark.home-page .hero h2,
+body.dark.home-page .menu-preview h2 {
+  color: white;
+}
+
+body.dark.home-page .menu-card {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* MORE UPCOMING DISHES */
+.notice {
+    background-color: #fff0f0;
+    color: #b22222;
+    text-align: center;
+    padding: 1em;
+    margin: 2em auto;
+    border-top: 2px dashed #f44336;
+    border-bottom: 2px dashed #f44336;
+    border-left: 2px dashed #f44336;
+    border-right: 2px dashed #f44336;
+    font-weight: bold;
+    max-width: 600px;
+    border-radius: 5px;
+  }
+
+
+ /* MOBILE PHONES with IMAGE */ 
+  img {
+    max-width: 100%;
+    height: auto;
   }
